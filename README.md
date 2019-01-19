@@ -34,7 +34,7 @@ Additional plugins include:
   ```shell
     docker volume create jenkins-home
     docker run \
-        -e JAVA_OPTS="t-Duser.timezone=Asia/Shanghai -Djenkins.install.runSetupWizard=false -Xms2048m -Xmx3584" \
+        -e JAVA_OPTS="-Duser.timezone=Asia/Shanghai -Djenkins.install.runSetupWizard=false -Xms2048m -Xmx3584m" \
         -e JENKINS_OPTS=--prefix=/jenkins \
         -e ROOT_URL=http://your.jenkins.example.com/jenkins/ \
         -v jenkins-home:/var/jenkins_home \
